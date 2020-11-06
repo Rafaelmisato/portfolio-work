@@ -55,7 +55,7 @@ header > img {
 .line-title > .line {
   width: 10%;
   height: 1px;
-  background-color: #0ff;
+  background-color: rgb(226, 224, 75);
 }
 
 .line-title > .title {
@@ -63,7 +63,7 @@ header > img {
   left: calc(10% + 20px);
   font-style: italic;
   font-size: 26px;
-  color: #0ff;
+  color: rgb(226, 224, 75);
 }
 
 .left {
@@ -110,7 +110,7 @@ header > img {
 }
 
 .works-single > img:hover {
-  transform: scale(1.8);
+  transform: scale(1.6);
   z-index: 1;
 }
 
@@ -124,7 +124,7 @@ header > img {
 .works > a {
   margin-top: 50px;
   text-align: center;
-  color: #fff;
+  color: rgb(226, 224, 75);
 }
 
 
