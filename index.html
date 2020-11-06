@@ -29,7 +29,18 @@
 		<div class="line left"></div>
 	</div>
 
-	<h1>Projects on line</h1>
+	<div class="online-works-wraper">
+		<div>
+			<button onclick=change()><i class="fa fa-arrow-left"></i></button>
+		</div>
+		<div class="online-works">
+			<iframe id="ipad" src="https://marcelomisato.web.app/"></iframe>
+		</div>
+		<div>
+			<button onclick=change()><i class="fa fa-arrow-right"></i></button>
+		</div>
+	</div>
+
 
 	<div class="line-title">
 		<div class="title">Projects</div>
@@ -68,5 +79,20 @@
 		<a href="https://rafaelmisato.github.io/portfolio/" target="_blank"><i class="fa fa-arrow-left" aria-hidden="true"></i> BACK TO HOME</a>
 	</div>
 
+
+	<script>
+		const iframe = document.getElementById('ipad');
+		const sites = [
+			"https://marcelomisato.web.app/",
+			"https://akikoceramicas.web.app/",
+		]
+		function change(e) {
+			if( iframe.src === "https://marcelomisato.web.app/"){
+				iframe.src = "https://akikoceramicas.web.app/"
+			} else {
+				iframe.src = "https://marcelomisato.web.app/"
+			}
+		}
+	</script>
 </body>
 </html>
