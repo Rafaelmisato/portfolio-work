@@ -11,7 +11,8 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="./css/styles.css">
-		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 		<link href="css/webfonts/all.css" rel="stylesheet" />
 </head>
 <body>
@@ -29,14 +30,14 @@
 		<div class="line left"></div>
 	</div>
 
-	<div class="online-works-wraper">
-		<div>
+	<div class="online-works-wraper animate__animated animate__backInLeft">
+		<div class="arrowleft">
 			<button onclick=change()><i class="fa fa-arrow-left"></i></button>
 		</div>
 		<div class="online-works">
 			<iframe id="ipad" src="https://marcelomisato.web.app/"></iframe>
 		</div>
-		<div>
+		<div class="arrowright">
 			<button onclick=change()><i class="fa fa-arrow-right"></i></button>
 		</div>
 	</div>
@@ -49,19 +50,19 @@
 
 	<div class="works">
 		<div class="works-single">
-			<img src="./img/site1.png" alt="website">
-			<img src="./img/site2.png" alt="website">
-			<img src="./img/site3.png" alt="website">
+			<img data-aos="flip-left" data-aos-duration="2000" src="./img/site1.png" alt="website">
+			<img data-aos="flip-left" data-aos-duration="2000" src="./img/site2.png" alt="website">
+			<img data-aos="flip-left" data-aos-duration="2000" src="./img/site3.png" alt="website">
 		</div>
 		<div class="works-single">
-			<img src="./img/site4.png" alt="website">
-			<img src="./img/site5.png" alt="website">
-			<img src="./img/site6.png" alt="website">
+			<img data-aos="flip-left" data-aos-duration="2000" src="./img/site4.png" alt="website">
+			<img data-aos="flip-left" data-aos-duration="2000" src="./img/site5.png" alt="website">
+			<img data-aos="flip-left" data-aos-duration="2000" src="./img/site6.png" alt="website">
 		</div>
 		<div class="works-single">
-			<img src="./img/site7.png" alt="website">
-			<img src="./img/site8.png" alt="website">
-			<img src="./img/site1.png" alt="website">
+			<img data-aos="flip-left" data-aos-duration="2000" src="./img/site7.png" alt="website">
+			<img data-aos="flip-left" data-aos-duration="2000" src="./img/site8.png" alt="website">
+			<img data-aos="flip-left" data-aos-duration="2000" src="./img/site1.png" alt="website">
 		</div>
 
 		<div class="line-title"> <!--tem um padding ali na esquerda, debug-->
@@ -70,22 +71,21 @@
 		</div>
 
 		<div class="works-single certificate">
-			<img src="./img/certificate-front-end.png" alt="front-end certificate">
-			<img src="./img/certificate-web-design.png" alt="web-design certificate">
+			<img data-aos="flip-left" data-aos-duration="2000" src="./img/certificate-front-end.png" alt="front-end certificate">
+			<img data-aos="flip-left" data-aos-duration="2000" src="./img/certificate-web-design.png" alt="web-design certificate">
 		</div>
 
-		<p>For security reasons, my ID was censured on my certificate</p>
+		<p class="security">For security reasons, my ID was censured on my certificate</p>
 
-		<a href="https://rafaelmisato.github.io/portfolio/" target="_blank"><i class="fa fa-arrow-left" aria-hidden="true"></i> BACK TO HOME</a>
+		<a href="https://rafaelmisato.github.io/portfolio/"><i class="fa fa-arrow-left" aria-hidden="true"></i> BACK TO HOME</a>
 	</div>
 
-
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
+		AOS.init();
+
 		const iframe = document.getElementById('ipad');
-		const sites = [
-			"https://marcelomisato.web.app/",
-			"https://akikoceramicas.web.app/",
-		]
+
 		function change(e) {
 			if( iframe.src === "https://marcelomisato.web.app/"){
 				iframe.src = "https://akikoceramicas.web.app/"
